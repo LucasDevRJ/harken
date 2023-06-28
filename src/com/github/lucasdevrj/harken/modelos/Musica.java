@@ -28,6 +28,6 @@ public class Musica extends Audio {
 
     @Override
     public void reproduzir() {
-        System.out.printf("Reproduzindo a música %s\n", this.titulo);
+        super.reproduzir();
     }
 }

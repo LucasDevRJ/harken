@@ -54,7 +54,20 @@ public class Main {
                 "Something in the way, yeah\n" +
                 "Mmm-mmm");
         musica1.reproduzir();
+        musica1.reproduzir();
+        musica1.reproduzir();
+        musica1.reproduzir();
+        System.out.println(musica1.getTotalDeReproducoes());
+        musica1.curtir();
+        musica1.curtir();
+        musica1.curtir();
+        musica1.curtir();
+        musica1.curtir();
+        System.out.println(musica1.getCurtidas());
+        System.out.println(musica1.getTotalDeReproducoes());
+        System.out.println(musica1.getClassificacao());
         System.out.println();
         musica1.exibirLetras();
+        musica1.exibePosicao();
     }
 }

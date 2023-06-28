@@ -5,7 +5,6 @@ public class Audio implements Classificavel{
     private int duracao;
     private int totalDeReproducoes = 0;
     private int curtidas = 0;
-    private Classificavel classificacao;
 
     public String getTitulo() {
         return titulo;
@@ -32,16 +31,27 @@ public class Audio implements Classificavel{
     }
 
     public void curtir() {
+        System.out.println("Curtiu " + this.titulo);
         this.curtidas++;
     }
 
     public void reproduzir() {
-        System.out.println("Reproduzindo");
+        System.out.println("Reproduzindo " + this.titulo);
         this.totalDeReproducoes++;
     }
 
+    public void exibePosicao() {
+        if (getClassificacao() < 3) {
+            System.out.println(this.titulo + " está entre as 3 mais tocadas!!");
+        } else if (getClassificacao() < 5) {
+            System.out.println(this.titulo + " está entre as 5 mais tocadas!!");
+        } else if (getClassificacao() < 10) {
+            System.out.println(this.titulo + " está entre as 10 mais tocadas!!");
+        }
+    }
+
     @Override
-    public int getClassificacoes() {
-        return 0;
+    public int getClassificacao() {
+        return (this.totalDeReproducoes + this.curtidas) / 2;
     }
 }
