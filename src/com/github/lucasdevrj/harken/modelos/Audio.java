@@ -1,10 +1,10 @@
 package com.github.lucasdevrj.harken.modelos;
 
 public class Audio {
-    private String titulo;
+    protected String titulo;
     private int duracao;
-    private int totalDeReproducoes;
-    private int curtidas;
+    private int totalDeReproducoes = 0;
+    private int curtidas = 0;
     //private Classificavel classificacao;
 
     public String getTitulo() {
@@ -27,10 +27,6 @@ public class Audio {
         return totalDeReproducoes;
     }
 
-    public void setTotalDeReproducoes(int totalDeReproducoes) {
-        this.totalDeReproducoes = totalDeReproducoes;
-    }
-
     public int getCurtidas() {
         return curtidas;
     }
@@ -41,5 +37,6 @@ public class Audio {
 
     public void reproduzir() {
         System.out.println("Reproduzindo");
+        this.totalDeReproducoes++;
     }
 }
