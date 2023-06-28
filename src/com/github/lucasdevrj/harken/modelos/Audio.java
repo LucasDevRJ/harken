@@ -1,3 +1,5 @@
+package com.github.lucasdevrj.harken.modelos;
+
 public class Audio {
     private String titulo;
     private int duracao;
