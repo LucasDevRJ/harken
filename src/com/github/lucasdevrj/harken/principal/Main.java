@@ -5,6 +5,7 @@ import com.github.lucasdevrj.harken.modelos.Musica;
 public class Main {
     public static void main(String[] args) {
         Musica musica1 = new Musica();
+        musica1.setTitulo("Something In The Way");
 
     }
 }

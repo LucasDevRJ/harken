@@ -35,10 +35,6 @@ public class Audio {
         return curtidas;
     }
 
-    public void setCurtidas(int curtidas) {
-        this.curtidas = curtidas;
-    }
-
     public void curtir() {
         this.curtidas++;
     }
