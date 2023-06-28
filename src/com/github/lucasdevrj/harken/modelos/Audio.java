@@ -1,11 +1,11 @@
 package com.github.lucasdevrj.harken.modelos;
 
-public class Audio {
+public class Audio implements Classificavel{
     protected String titulo;
     private int duracao;
     private int totalDeReproducoes = 0;
     private int curtidas = 0;
-    //private Classificavel classificacao;
+    private Classificavel classificacao;
 
     public String getTitulo() {
         return titulo;
@@ -38,5 +38,10 @@ public class Audio {
     public void reproduzir() {
         System.out.println("Reproduzindo");
         this.totalDeReproducoes++;
+    }
+
+    @Override
+    public int getClassificacoes() {
+        return 0;
     }
 }

@@ -4,7 +4,7 @@ public class Episodio {
     private String nome;
     private String descricao;
     private String host;
-    private String convidade;
+    private String convidado;
 
     public String getNome() {
         return nome;
@@ -30,11 +30,11 @@ public class Episodio {
         this.host = host;
     }
 
-    public String getConvidade() {
-        return convidade;
+    public String getConvidado() {
+        return convidado;
     }
 
-    public void setConvidade(String convidade) {
-        this.convidade = convidade;
+    public void setConvidado(String convidado) {
+        this.convidado = convidado;
     }
 }
