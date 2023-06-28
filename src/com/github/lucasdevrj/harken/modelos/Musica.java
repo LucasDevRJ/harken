@@ -21,8 +21,13 @@ public class Musica extends Audio {
         this.letras = letras;
     }
 
+    public void exibirLetras() {
+        System.out.println(this.titulo + " letras:");
+        System.out.println(this.letras);
+    }
+
     @Override
     public void reproduzir() {
-        System.out.printf("Reproduzindo a música %s", this.titulo);
+        System.out.printf("Reproduzindo a música %s\n", this.titulo);
     }
 }
