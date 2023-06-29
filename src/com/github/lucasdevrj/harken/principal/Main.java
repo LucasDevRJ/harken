@@ -1,14 +1,20 @@
 package com.github.lucasdevrj.harken.principal;
 
+import com.github.lucasdevrj.harken.CalculadoraDeTempo;
 import com.github.lucasdevrj.harken.modelos.Album;
+import com.github.lucasdevrj.harken.modelos.Audio;
 import com.github.lucasdevrj.harken.modelos.Musica;
 import com.github.lucasdevrj.harken.modelos.Podcast;
+
+import java.util.zip.Adler32;
 
 public class Main {
     public static void main(String[] args) {
         Album album = new Album();
         album.setNome("Nevermind");
         album.setData("24/09/1991");
+
+        Audio audio = new Audio();
 
         Musica musica1 = new Musica();
         musica1.setTitulo("Something In The Way");
@@ -59,6 +65,7 @@ public class Main {
                 "Mmm-mmm\n" +
                 "Something in the way, yeah\n" +
                 "Mmm-mmm");
+
         musica1.reproduzir();
         System.out.println();
         musica1.curtir();
@@ -120,21 +127,25 @@ public class Main {
                 "A denial, a denial\n" +
                 "A denial, a denial\n" +
                 "A denial");
-        musica2.reproduzir();
-        musica2.curtir();
-        //musica1.exibirLetras();
 
+        musica2.reproduzir();
+        System.out.println();
+        musica2.curtir();
+        System.out.println();
         musica2.exibePosicao();
         System.out.println();
 
         album.adicionaMusica(musica1);
+        System.out.println();
         album.adicionaMusica(musica2);
+        System.out.println();
         album.exibeInformacoes();
 
         musica1.setAlbum(album);
         musica2.setAlbum(album);
 
         musica1.exibeInformacoes();
+        System.out.println();
         musica2.exibeInformacoes();
 
         Podcast podcast = new Podcast();
@@ -148,5 +159,12 @@ public class Main {
         podcast.curtir();
         System.out.println();
         podcast.exibeInformacoes();
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.calculaDuracaoTotal(musica1);
+        calculadora.calculaDuracaoTotal(musica2);
+        calculadora.calculaDuracaoTotal(podcast);
+
+        audio.exibeDuracaoTotalEscutada(calculadora);
     }
 }

@@ -1,5 +1,6 @@
 package com.github.lucasdevrj.harken.modelos;
 
+import com.github.lucasdevrj.harken.CalculadoraDeTempo;
 import com.github.lucasdevrj.harken.classificacao.Classificavel;
 
 public class Audio implements Classificavel {
@@ -61,6 +62,11 @@ public class Audio implements Classificavel {
                 Quantidade de Curtidas: %d
                 """.formatted(this.titulo, this.duracao, this.totalDeReproducoes, this.curtidas);
         System.out.print(informacoes);
+    }
+
+    public void exibeDuracaoTotalEscutada(CalculadoraDeTempo calculadora) {
+        int duracaoTotal = calculadora.getDuracaoTotal();
+        System.out.println("Duração total escutada: " + duracaoTotal + " minutos.");
     }
 
     @Override
