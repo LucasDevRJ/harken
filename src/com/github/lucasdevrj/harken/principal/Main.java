@@ -174,10 +174,12 @@ public class Main {
         classificacao.exibePosicao(musica1);
         System.out.println();
         classificacao.exibePosicao(musica2);
+        System.out.println();
+        classificacao.exibeAsTresMaisCurtidas(musica1, musica2, podcast);
 
         System.out.println();
         audio.exibeDuracaoTotalEscutada(calculadora);
         System.out.println();
-        audio.exibeMelhoresPosicoes(musica1, musica2, podcast);
+
     }
 }

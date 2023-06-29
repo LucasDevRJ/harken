@@ -60,47 +60,6 @@ public class Audio implements Classificavel, Calcula {
         System.out.println("Duração total escutada: " + duracaoTotal + " minutos.");
     }
 
-    public void exibeMelhoresPosicoes(Audio audio1, Audio audio2, Audio audio3) {
-        System.out.println("Mais curtidas:");
-
-        int trocaCurtidas = 0;
-        String trocaTitulo = "";
-
-        int maiorNumeroCurtidas = audio1.getCurtidas();
-        String tituloPrimeiroColocado = audio1.getTitulo();
-
-        int segundoMaiorNumeroCurtidas = audio2.getCurtidas();
-        String tituloSegundoColocado = audio2.getTitulo();
-
-        int terceiroMaiorNumeroCurtidas = audio3.getCurtidas();
-        String tituloTerceiroColocado = audio3.getTitulo();
-
-        if (maiorNumeroCurtidas < segundoMaiorNumeroCurtidas) {
-            maiorNumeroCurtidas = segundoMaiorNumeroCurtidas;
-            tituloPrimeiroColocado = tituloSegundoColocado;
-        }
-
-        if (maiorNumeroCurtidas < terceiroMaiorNumeroCurtidas) {
-            maiorNumeroCurtidas = terceiroMaiorNumeroCurtidas;
-            tituloPrimeiroColocado = tituloTerceiroColocado;
-        }
-
-        if (segundoMaiorNumeroCurtidas < terceiroMaiorNumeroCurtidas) {
-            trocaTitulo = tituloSegundoColocado;
-            trocaCurtidas = segundoMaiorNumeroCurtidas;
-
-            segundoMaiorNumeroCurtidas = terceiroMaiorNumeroCurtidas;
-            tituloSegundoColocado = tituloTerceiroColocado;
-
-            terceiroMaiorNumeroCurtidas = trocaCurtidas;
-            tituloTerceiroColocado = trocaTitulo;
-        }
-
-        System.out.println(tituloPrimeiroColocado);
-        System.out.println(tituloSegundoColocado);
-        System.out.println(tituloTerceiroColocado);
-    }
-
     @Override
     public int getClassificacao() {
         return (this.totalDeReproducoes + this.curtidas) / 2;
