@@ -1,9 +1,13 @@
 package com.github.lucasdevrj.harken.modelos;
 
+import com.github.lucasdevrj.harken.Album;
+
 public class Musica extends Audio {
 
     private String genero;
     private String letras;
+
+    private Album album;
 
     public String getGenero() {
         return genero;
