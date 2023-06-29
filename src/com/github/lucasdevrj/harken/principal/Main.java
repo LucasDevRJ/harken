@@ -60,11 +60,73 @@ public class Main {
         //musica1.exibirLetras();
         musica1.exibeInformacoes();
         musica1.exibePosicao();
+        System.out.println();
+
+        Musica musica2 = new Musica();
+        musica2.setTitulo("Smells Like Teen Spirit");
+        musica2.setDuracao(5);
+        musica2.setGenero("Rock");
+        musica2.setLetras("Load up on guns, bring your friends\n" +
+                "It's fun to lose and to pretend\n" +
+                "She's over-bored and self-assured\n" +
+                "Oh no, I know a dirty word\n" +
+                "Hello, hello, hello, how low\n" +
+                "Hello, hello, hello, how low\n" +
+                "Hello, hello, hello, how low\n" +
+                "Hello, hello, hello\n" +
+                "With the lights out, it's less dangerous\n" +
+                "Here we are now, entertain us\n" +
+                "I feel stupid, and contagious\n" +
+                "Here we are now, entertain us\n" +
+                "A mulatto, an albino\n" +
+                "A mosquito, my libido\n" +
+                "Yeah, hey, yay\n" +
+                "I'm worse at what I do best\n" +
+                "And for this gift, I feel blessed\n" +
+                "Our little group has always been\n" +
+                "And always will until the end\n" +
+                "Hello, hello, hello, how low\n" +
+                "Hello, hello, hello, how low\n" +
+                "Hello, hello, hello, how low\n" +
+                "Hello, hello, hello\n" +
+                "With the lights out, it's less dangerous\n" +
+                "Here we are now, entertain us\n" +
+                "I feel stupid, and contagious\n" +
+                "Here we are now, entertain us\n" +
+                "A mulatto, an albino\n" +
+                "A mosquito, my libido\n" +
+                "Yeah, hey, yay\n" +
+                "And I forget, just why I taste\n" +
+                "Oh yeah, I guess it makes me smile\n" +
+                "I found it hard, it's hard to find\n" +
+                "Oh well, whatever, never mind\n" +
+                "Hello, hello, hello, how low?\n" +
+                "Hello, hello, hello, how low?\n" +
+                "Hello, hello, hello, how low?\n" +
+                "Hello, hello, hello\n" +
+                "With the lights out, it's less dangerous\n" +
+                "Here we are now, entertain us\n" +
+                "I feel stupid, and contagious\n" +
+                "Here we are now, entertain us\n" +
+                "A mulatto, an albino\n" +
+                "A mosquito, my libido\n" +
+                "A denial, a denial\n" +
+                "A denial, a denial\n" +
+                "A denial, a denial\n" +
+                "A denial, a denial\n" +
+                "A denial");
+        musica2.reproduzir();
+        musica2.curtir();
+        //musica1.exibirLetras();
+        musica2.exibeInformacoes();
+        musica2.exibePosicao();
+        System.out.println();
 
         Album album = new Album();
         album.setNome("Nevermind");
         album.setData("24/09/1991");
         album.adicionaMusica(musica1);
+        album.adicionaMusica(musica2);
         album.exibeInformacoes();
 
         Podcast podcast = new Podcast();

@@ -1,4 +1,7 @@
 package com.github.lucasdevrj.harken.modelos;
+
+import com.github.lucasdevrj.harken.classificacao.Classificavel;
+
 public class Album {
     private String nome;
     private int numeroDeMusicas;
@@ -18,7 +21,6 @@ public class Album {
         this.numeroDeMusicas++;
         this.duracao += musica.getDuracao();
     }
-
     public int getNumeroDeMusicas() {
         return numeroDeMusicas;
     }
