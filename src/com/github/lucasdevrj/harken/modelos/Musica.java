@@ -33,7 +33,6 @@ public class Musica extends Audio {
     public void setAlbum(Album album) {
         this.album = album;
     }
-
     @Override
     public void exibeInformacoes() {
         super.exibeInformacoes();

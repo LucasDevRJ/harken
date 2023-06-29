@@ -65,6 +65,9 @@ public class Main {
         musica1.reproduzir();
         System.out.println();
         musica1.curtir();
+        musica1.curtir();
+        musica1.curtir();
+        musica1.curtir();
         System.out.println();
         //musica1.exibirLetras();
         musica1.exibePosicao();
@@ -127,6 +130,7 @@ public class Main {
         musica2.reproduzir();
         System.out.println();
         musica2.curtir();
+        musica2.curtir();
         System.out.println();
         musica2.exibePosicao();
         System.out.println();
@@ -153,6 +157,9 @@ public class Main {
         podcast.reproduzir();
         System.out.println();
         podcast.curtir();
+        podcast.curtir();
+        podcast.curtir();
+        podcast.curtir();
         System.out.println();
         podcast.exibeInformacoes();
 
@@ -165,5 +172,7 @@ public class Main {
 
         System.out.println();
         audio.exibeDuracaoTotalEscutada(calculadora);
+        System.out.println();
+        audio.exibeMelhoresPosicoes(musica1, musica2, podcast);
     }
 }
