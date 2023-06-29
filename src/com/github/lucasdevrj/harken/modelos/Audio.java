@@ -44,16 +44,6 @@ public class Audio implements Classificavel, Calcula {
         this.totalDeReproducoes++;
     }
 
-    public void exibePosicao() {
-        if (getClassificacao() < 3) {
-            System.out.println(this.titulo + " está entre as 3 mais tocadas!!");
-        } else if (getClassificacao() < 5) {
-            System.out.println(this.titulo + " está entre as 5 mais tocadas!!");
-        } else if (getClassificacao() < 10) {
-            System.out.println(this.titulo + " está entre as 10 mais tocadas!!");
-        }
-    }
-
     public void exibeInformacoes() {
         String informacoes = """
                 Informações sobre o áudio
@@ -114,6 +104,11 @@ public class Audio implements Classificavel, Calcula {
     @Override
     public int getClassificacao() {
         return (this.totalDeReproducoes + this.curtidas) / 2;
+    }
+
+    @Override
+    public String getNome() {
+        return this.titulo;
     }
 
     @Override

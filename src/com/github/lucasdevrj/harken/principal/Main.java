@@ -1,6 +1,7 @@
 package com.github.lucasdevrj.harken.principal;
 
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
+import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.modelos.Album;
 import com.github.lucasdevrj.harken.modelos.Audio;
 import com.github.lucasdevrj.harken.modelos.Musica;
@@ -70,7 +71,6 @@ public class Main {
         musica1.curtir();
         System.out.println();
         //musica1.exibirLetras();
-        musica1.exibePosicao();
         System.out.println();
 
         Musica musica2 = new Musica();
@@ -132,7 +132,6 @@ public class Main {
         musica2.curtir();
         musica2.curtir();
         System.out.println();
-        musica2.exibePosicao();
         System.out.println();
 
         album.adicionaMusica(musica1);
@@ -169,6 +168,12 @@ public class Main {
         calculadora.calculaDuracaoTotal(musica1);
         calculadora.calculaDuracaoTotal(musica2);
         calculadora.calculaDuracaoTotal(podcast);
+        System.out.println();
+
+        Classificacao classificacao = new Classificacao();
+        classificacao.exibePosicao(musica1);
+        System.out.println();
+        classificacao.exibePosicao(musica2);
 
         System.out.println();
         audio.exibeDuracaoTotalEscutada(calculadora);
