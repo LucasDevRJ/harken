@@ -1,20 +1,16 @@
 package com.github.lucasdevrj.harken.principal;
 
-import com.github.lucasdevrj.harken.CalculadoraDeTempo;
+import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.modelos.Album;
 import com.github.lucasdevrj.harken.modelos.Audio;
 import com.github.lucasdevrj.harken.modelos.Musica;
 import com.github.lucasdevrj.harken.modelos.Podcast;
-
-import java.util.zip.Adler32;
 
 public class Main {
     public static void main(String[] args) {
         Album album = new Album();
         album.setNome("Nevermind");
         album.setData("24/09/1991");
-
-        Audio audio = new Audio();
 
         Musica musica1 = new Musica();
         musica1.setTitulo("Something In The Way");
@@ -160,11 +156,14 @@ public class Main {
         System.out.println();
         podcast.exibeInformacoes();
 
-        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        Audio audio = new Audio();
+
+        Calculadora calculadora = new Calculadora();
         calculadora.calculaDuracaoTotal(musica1);
         calculadora.calculaDuracaoTotal(musica2);
         calculadora.calculaDuracaoTotal(podcast);
 
+        System.out.println();
         audio.exibeDuracaoTotalEscutada(calculadora);
     }
 }
