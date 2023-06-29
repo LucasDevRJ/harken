@@ -24,6 +24,6 @@ public class Musica extends Audio {
     }
     @Override
     public void reproduzir() {
-        super.reproduzir();
+        System.out.println("Tocando a música " + this.titulo);;
     }
 }
