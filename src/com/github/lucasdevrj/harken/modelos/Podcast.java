@@ -2,9 +2,8 @@ package com.github.lucasdevrj.harken.modelos;
 
 public class Podcast extends Audio {
     private String descricao;
-    private int totalDeEpisodios = 0;
-
-    private Episodio episodio;
+    private String host;
+    private String convidado;
 
     public String getDescricao() {
         return descricao;
@@ -14,12 +13,19 @@ public class Podcast extends Audio {
         this.descricao = descricao;
     }
 
-    public int getTotalDeEpisodios() {
-        return totalDeEpisodios;
+    public String getHost() {
+        return host;
     }
 
-    public void adiciona(Episodio episodio) {
-        System.out.println("O episodio de Podcast " + this.episodio.getNome() + " foi adicionado!");
-        this.totalDeEpisodios++;
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public String getConvidado() {
+        return convidado;
+    }
+
+    public void setConvidado(String convidado) {
+        this.convidado = convidado;
     }
 }

@@ -1,6 +1,7 @@
 package com.github.lucasdevrj.harken.principal;
 
 import com.github.lucasdevrj.harken.modelos.Musica;
+import com.github.lucasdevrj.harken.modelos.Podcast;
 
 import java.util.Scanner;
 
@@ -57,6 +58,15 @@ public class Main {
                 "Mmm-mmm");
         musica1.reproduzir();
         musica1.curtir();
+        //musica1.exibirLetras();
         musica1.exibeInformacoes();
+        musica1.exibePosicao();
+
+        Podcast podcast = new Podcast();
+        podcast.setTitulo("Hipsters Ponto Tech");
+        podcast.setDescricao("Discussões sobre tecnologia, programação, design, startups e as últimas tendências.");
+        podcast.setDuracao(41);
+        podcast.setHost("Paulo Silveira");
+        podcast.setConvidado("Alaydes Morais");
     }
 }
