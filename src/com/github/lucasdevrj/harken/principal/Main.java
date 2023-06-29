@@ -1,10 +1,8 @@
 package com.github.lucasdevrj.harken.principal;
 
-import com.github.lucasdevrj.harken.Album;
+import com.github.lucasdevrj.harken.modelos.Album;
 import com.github.lucasdevrj.harken.modelos.Musica;
 import com.github.lucasdevrj.harken.modelos.Podcast;
-
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {

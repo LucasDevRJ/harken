@@ -1,6 +1,8 @@
 package com.github.lucasdevrj.harken.modelos;
 
-public class Audio implements Classificavel{
+import com.github.lucasdevrj.harken.classificacao.Classificavel;
+
+public class Audio implements Classificavel {
     protected String titulo;
     private int duracao;
     private int totalDeReproducoes = 0;

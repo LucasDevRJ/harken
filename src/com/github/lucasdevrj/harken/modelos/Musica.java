@@ -1,7 +1,5 @@
 package com.github.lucasdevrj.harken.modelos;
 
-import com.github.lucasdevrj.harken.Album;
-
 public class Musica extends Audio {
 
     private String genero;

@@ -1,7 +1,4 @@
-package com.github.lucasdevrj.harken;
-
-import com.github.lucasdevrj.harken.modelos.Musica;
-
+package com.github.lucasdevrj.harken.modelos;
 public class Album {
     private String nome;
     private int numeroDeMusicas;
