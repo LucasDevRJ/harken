@@ -6,6 +6,10 @@ import com.github.lucasdevrj.harken.modelos.Podcast;
 
 public class Main {
     public static void main(String[] args) {
+        Album album = new Album();
+        album.setNome("Nevermind");
+        album.setData("24/09/1991");
+
         Musica musica1 = new Musica();
         musica1.setTitulo("Something In The Way");
         musica1.setDuracao(4);
@@ -56,9 +60,10 @@ public class Main {
                 "Something in the way, yeah\n" +
                 "Mmm-mmm");
         musica1.reproduzir();
+        System.out.println();
         musica1.curtir();
+        System.out.println();
         //musica1.exibirLetras();
-        musica1.exibeInformacoes();
         musica1.exibePosicao();
         System.out.println();
 
@@ -118,16 +123,19 @@ public class Main {
         musica2.reproduzir();
         musica2.curtir();
         //musica1.exibirLetras();
-        musica2.exibeInformacoes();
+
         musica2.exibePosicao();
         System.out.println();
 
-        Album album = new Album();
-        album.setNome("Nevermind");
-        album.setData("24/09/1991");
         album.adicionaMusica(musica1);
         album.adicionaMusica(musica2);
         album.exibeInformacoes();
+
+        musica1.setAlbum(album);
+        musica2.setAlbum(album);
+
+        musica1.exibeInformacoes();
+        musica2.exibeInformacoes();
 
         Podcast podcast = new Podcast();
         podcast.setTitulo("Hipsters Ponto Tech");
@@ -135,5 +143,10 @@ public class Main {
         podcast.setDuracao(41);
         podcast.setHost("Paulo Silveira");
         podcast.setConvidado("Alaydes Morais");
+        podcast.reproduzir();
+        System.out.println();
+        podcast.curtir();
+        System.out.println();
+        podcast.exibeInformacoes();
     }
 }

@@ -16,11 +16,6 @@ public class Album {
         this.nome = nome;
     }
 
-    public void adicionaMusica(Musica musica) {
-        System.out.println("Música " + musica.getTitulo() + " adicionada no album!");
-        this.numeroDeMusicas++;
-        this.duracao += musica.getDuracao();
-    }
     public int getNumeroDeMusicas() {
         return numeroDeMusicas;
     }
@@ -37,6 +32,11 @@ public class Album {
         this.data = data;
     }
 
+    public void adicionaMusica(Musica musica) {
+        System.out.println("Música " + musica.getTitulo() + " adicionada no album!");
+        this.numeroDeMusicas++;
+        this.duracao += musica.getDuracao();
+    }
     public void exibeInformacoes() {
         String informacoes = """
                 Informações sobre o album

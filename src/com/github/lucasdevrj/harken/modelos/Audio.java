@@ -38,7 +38,7 @@ public class Audio implements Classificavel {
     }
 
     public void reproduzir() {
-        System.out.println("Reproduzindo áudio " + this.titulo);
+        System.out.println("Reproduzindo " + this.titulo);
         this.totalDeReproducoes++;
     }
 
@@ -60,7 +60,7 @@ public class Audio implements Classificavel {
                 Vezes Reproduzidos: %d
                 Quantidade de Curtidas: %d
                 """.formatted(this.titulo, this.duracao, this.totalDeReproducoes, this.curtidas);
-        System.out.println(informacoes);
+        System.out.print(informacoes);
     }
 
     @Override

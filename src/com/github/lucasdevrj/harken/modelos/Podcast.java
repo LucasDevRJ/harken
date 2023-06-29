@@ -28,4 +28,15 @@ public class Podcast extends Audio {
     public void setConvidado(String convidado) {
         this.convidado = convidado;
     }
+
+    @Override
+    public void exibeInformacoes() {
+        super.exibeInformacoes();
+        String informacoes = """
+                Descrição: %s
+                Host: %s
+                Convidado: %s
+                """.formatted(this.descricao, this.host, this.convidado);
+        System.out.print(informacoes);
+    }
 }
