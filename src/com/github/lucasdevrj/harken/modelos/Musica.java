@@ -1,20 +1,11 @@
 package com.github.lucasdevrj.harken.modelos;
 
-import com.github.lucasdevrj.harken.calculadora.Calcula;
-import com.github.lucasdevrj.harken.calculadora.Calculadora;
-
 public class Musica extends Audio {
 
-    private String genero;
+    private Genero genero;
     private String letras;
     private Album album;
 
-    public String getGenero() {
-        return genero;
-    }
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
     public String getLetras() {
         return letras;
     }
