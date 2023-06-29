@@ -2,6 +2,8 @@ package com.github.lucasdevrj.harken.principal;
 
 import com.github.lucasdevrj.harken.modelos.Musica;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Musica musica1 = new Musica();
@@ -53,21 +55,23 @@ public class Main {
                 "Mmm-mmm\n" +
                 "Something in the way, yeah\n" +
                 "Mmm-mmm");
-        musica1.reproduzir();
-        musica1.reproduzir();
-        musica1.reproduzir();
-        musica1.reproduzir();
-        System.out.println(musica1.getTotalDeReproducoes());
-        musica1.curtir();
-        musica1.curtir();
-        musica1.curtir();
-        musica1.curtir();
-        musica1.curtir();
-        System.out.println(musica1.getCurtidas());
-        System.out.println(musica1.getTotalDeReproducoes());
-        System.out.println(musica1.getClassificacao());
-        System.out.println();
-        musica1.exibirLetras();
-        musica1.exibePosicao();
+
+        Scanner entrada = new Scanner(System.in);
+
+        String menu = """
+                --------------------|Harken|--------------------
+                \n1 - Músicas
+                \n2 - Podcast
+                \n3 - Radio
+                \n4 - Sair
+                """;
+        System.out.print("Digite a opção desejada:");
+        int opcao = entrada.nextInt();
+
+        while (opcao <= 0 || opcao > 4) {
+            System.out.println("Opção inválida!!");
+            System.out.print("Digite a opção desejada:");
+            opcao = entrada.nextInt();
+        }
     }
 }
