@@ -1,5 +1,6 @@
 package com.github.lucasdevrj.harken.principal;
 
+import com.github.lucasdevrj.harken.Album;
 import com.github.lucasdevrj.harken.modelos.Musica;
 import com.github.lucasdevrj.harken.modelos.Podcast;
 
@@ -61,6 +62,12 @@ public class Main {
         //musica1.exibirLetras();
         musica1.exibeInformacoes();
         musica1.exibePosicao();
+
+        Album album = new Album();
+        album.setNome("Nevermind");
+        album.setData("24/09/1991");
+        album.adicionaMusica(musica1);
+        album.exibeInformacoes();
 
         Podcast podcast = new Podcast();
         podcast.setTitulo("Hipsters Ponto Tech");

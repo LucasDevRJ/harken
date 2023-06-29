@@ -52,6 +52,7 @@ public class Audio implements Classificavel{
 
     public void exibeInformacoes() {
         String informacoes = """
+                Informações sobre o áudio
                 Título: %s
                 Duração: %d minutos
                 Vezes Reproduzidos: %d
