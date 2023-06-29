@@ -50,6 +50,16 @@ public class Audio implements Classificavel{
         }
     }
 
+    public void exibeInformacoes() {
+        String informacoes = """
+                Título: %s
+                Duração: %d minutos
+                Vezes Reproduzidos: %d
+                Quantidade de Curtidas: %d
+                """.formatted(this.titulo, this.duracao, this.totalDeReproducoes, this.curtidas);
+        System.out.println(informacoes);
+    }
+
     @Override
     public int getClassificacao() {
         return (this.totalDeReproducoes + this.curtidas) / 2;

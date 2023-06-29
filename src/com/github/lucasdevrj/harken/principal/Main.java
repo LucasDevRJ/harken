@@ -55,23 +55,8 @@ public class Main {
                 "Mmm-mmm\n" +
                 "Something in the way, yeah\n" +
                 "Mmm-mmm");
-
-        Scanner entrada = new Scanner(System.in);
-
-        String menu = """
-                --------------------|Harken|--------------------
-                \n1 - Músicas
-                \n2 - Podcast
-                \n3 - Radio
-                \n4 - Sair
-                """;
-        System.out.print("Digite a opção desejada:");
-        int opcao = entrada.nextInt();
-
-        while (opcao <= 0 || opcao > 4) {
-            System.out.println("Opção inválida!!");
-            System.out.print("Digite a opção desejada:");
-            opcao = entrada.nextInt();
-        }
+        musica1.reproduzir();
+        musica1.curtir();
+        musica1.exibeInformacoes();
     }
 }
