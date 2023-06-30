@@ -1,6 +1,6 @@
 package com.github.lucasdevrj.harken.principal;
 
-import com.github.lucasdevrj.harken.calculadora.Calcula;
+import com.github.lucasdevrj.harken.listas.Listagem;
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.modelos.*;
@@ -342,6 +342,9 @@ public class Main {
         classificacao.adicionaAudio(radio1);
         classificacao.exibePosicao();
 
-        audio.
+        Listagem listaAudios = new Listagem();
+        listaAudios.adicionaAudio(musica1);
+        listaAudios.adicionaAudio(podcast);
+        listaAudios.adicionaAudio(radio1);
     }
 }

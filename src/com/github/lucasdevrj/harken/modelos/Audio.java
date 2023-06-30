@@ -5,16 +5,12 @@ import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificavel;
 
 import java.util.ArrayList;
-import java.util.zip.Adler32;
 
 public class Audio implements Classificavel, Calcula {
     protected String titulo;
     protected int duracao;
     protected int totalDeReproducoes = 0;
     private int curtidas = 0;
-
-    private ArrayList<Audio> listaAudios = new ArrayList<Audio>();
-
     public String getTitulo() {
         return titulo;
     }
@@ -37,10 +33,6 @@ public class Audio implements Classificavel, Calcula {
 
     public int getCurtidas() {
         return curtidas;
-    }
-
-    public ArrayList<Audio> getListaAudios() {
-        return listaAudios;
     }
 
     public void curtir() {
@@ -67,13 +59,6 @@ public class Audio implements Classificavel, Calcula {
     public void exibeDuracaoTotalEscutada(Calculadora duracao) {
         int duracaoTotal = duracao.getDuracaoTotal();
         System.out.println("Duração total escutada: " + duracaoTotal + " minutos.");
-    }
-
-    public void exibeTodosAudios() {
-        System.out.println("Lista de audios cadastrados:");
-        for (int i = 0; i < this.listaAudios.size(); i++) {
-            System.out.println(this.listaAudios.get(i).getTitulo());
-        }
     }
 
     @Override
