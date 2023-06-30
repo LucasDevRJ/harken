@@ -18,7 +18,7 @@ public class Audio implements Classificavel, Calcula {
         this.titulo = titulo;
     }
 
-    public int getDuracao() {
+    public int getDuracaoCalculada() {
         return duracao;
     }
 
@@ -71,7 +71,7 @@ public class Audio implements Classificavel, Calcula {
     }
 
     @Override
-    public int getDuracaoAudio() {
-        return this.duracao;
+    public int getTotalReproducoesAudio() {
+        return this.totalDeReproducoes;
     }
 }

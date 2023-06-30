@@ -288,7 +288,7 @@ public class Main {
         System.out.println();
         classificacao.exibePosicao(musica2);
         System.out.println();
-        classificacao.exibeAsTresMaisCurtidas(musica1, musica2, podcast);
+
 
         System.out.println();
         audio.exibeDuracaoTotalEscutada(calculadora);
@@ -340,6 +340,12 @@ public class Main {
         Calculadora calculadoraAlbum = new Calculadora();
         calculadoraAlbum.calculaDuracaoTotal(album);
         album.exibeInformacoes();
+        System.out.println();
 
+        Classificacao classificacao2 = new Classificacao();
+        classificacao2.adicionaAudio(radio1);
+        classificacao2.adicionaAudio(musica2);
+        classificacao2.adicionaAudio(podcast);
+        classificacao2.exibeTodosAudios();
     }
 }

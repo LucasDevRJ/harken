@@ -2,7 +2,17 @@ package com.github.lucasdevrj.harken.classificacao;
 
 import com.github.lucasdevrj.harken.modelos.Audio;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Classificacao {
+
+    private ArrayList<Audio> listaAudios = new ArrayList<Audio>();
+
+    public ArrayList<Audio> getListaAudios() {
+        return listaAudios;
+    }
+
     public void exibePosicao(Classificavel audio) {
         if (audio.getClassificacao() < 3) {
             System.out.println(audio.getNome() + " está entre as 3 mais tocadas!!");
@@ -13,44 +23,14 @@ public class Classificacao {
         }
     }
 
-    public void exibeAsTresMaisCurtidas(Audio audio1, Audio audio2, Audio audio3) {
-        System.out.println("As três mais curtidas do momento:");
+    public void adicionaAudio(Audio audio) {
+        this.listaAudios.add(audio);
+    }
 
-        int trocaCurtidas = 0;
-        String trocaTitulo = "";
-
-        int maiorNumeroCurtidas = audio1.getCurtidas();
-        String tituloPrimeiroColocado = audio1.getTitulo();
-
-        int segundoMaiorNumeroCurtidas = audio2.getCurtidas();
-        String tituloSegundoColocado = audio2.getTitulo();
-
-        int terceiroMaiorNumeroCurtidas = audio3.getCurtidas();
-        String tituloTerceiroColocado = audio3.getTitulo();
-
-        if (maiorNumeroCurtidas < segundoMaiorNumeroCurtidas) {
-            maiorNumeroCurtidas = segundoMaiorNumeroCurtidas;
-            tituloPrimeiroColocado = tituloSegundoColocado;
+    public void exibeTodosAudios() {
+        System.out.println("Todos os tipos de audios:");
+        for (int i = 0; i < this.listaAudios.size(); i++) {
+            System.out.println(this.listaAudios.get(i).getTitulo());
         }
-
-        if (maiorNumeroCurtidas < terceiroMaiorNumeroCurtidas) {
-            maiorNumeroCurtidas = terceiroMaiorNumeroCurtidas;
-            tituloPrimeiroColocado = tituloTerceiroColocado;
-        }
-
-        if (segundoMaiorNumeroCurtidas < terceiroMaiorNumeroCurtidas) {
-            trocaTitulo = tituloSegundoColocado;
-            trocaCurtidas = segundoMaiorNumeroCurtidas;
-
-            segundoMaiorNumeroCurtidas = terceiroMaiorNumeroCurtidas;
-            tituloSegundoColocado = tituloTerceiroColocado;
-
-            terceiroMaiorNumeroCurtidas = trocaCurtidas;
-            tituloTerceiroColocado = trocaTitulo;
-        }
-
-        System.out.println(tituloPrimeiroColocado);
-        System.out.println(tituloSegundoColocado);
-        System.out.println(tituloTerceiroColocado);
     }
 }

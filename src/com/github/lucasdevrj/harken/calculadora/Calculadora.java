@@ -5,7 +5,7 @@ public class Calculadora {
         return duracaoTotal;
     }
     public int calculaDuracaoTotal(Calcula audio) {
-        this.duracaoTotal += audio.getDuracaoAudio();
+        this.duracaoTotal += audio.getDuracaoCalculada();
         return this.duracaoTotal;
     }
 }

@@ -4,4 +4,6 @@ public interface Classificavel {
     public int getClassificacao();
 
     public String getNome();
+
+    public int getTotalReproducoesAudio();
 }
