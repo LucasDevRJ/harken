@@ -6,6 +6,14 @@ public class Musica extends Audio {
     private String letras;
     private Album album;
 
+    public Genero getGenero() {
+        return genero;
+    }
+
+    public void setGenero(Genero genero) {
+        this.genero = genero;
+    }
+
     public String getLetras() {
         return letras;
     }
