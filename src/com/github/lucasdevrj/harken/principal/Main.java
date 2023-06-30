@@ -283,13 +283,6 @@ public class Main {
         calculadora.calculaDuracaoTotal(podcast);
         System.out.println();
 
-        Classificacao classificacao = new Classificacao();
-        classificacao.exibePosicao(musica1);
-        System.out.println();
-        classificacao.exibePosicao(musica2);
-        System.out.println();
-
-
         System.out.println();
         audio.exibeDuracaoTotalEscutada(calculadora);
         System.out.println();
@@ -342,10 +335,13 @@ public class Main {
         album.exibeInformacoes();
         System.out.println();
 
-        Classificacao classificacao2 = new Classificacao();
-        classificacao2.adicionaAudio(radio1);
-        classificacao2.adicionaAudio(musica2);
-        classificacao2.adicionaAudio(podcast);
-        classificacao2.exibeTodosAudios();
+        Classificacao classificacao = new Classificacao();
+        classificacao.adicionaAudio(musica1);
+        classificacao.adicionaAudio(musica2);
+        classificacao.adicionaAudio(podcast);
+        classificacao.adicionaAudio(radio1);
+        classificacao.exibePosicao();
+
+        audio.
     }
 }
