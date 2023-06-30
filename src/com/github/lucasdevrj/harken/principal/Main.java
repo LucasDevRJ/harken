@@ -66,15 +66,11 @@ public class Main {
                 "Something in the way, yeah\n" +
                 "Mmm-mmm");
 
-        musica1.reproduzir();
-        System.out.println();
-        musica1.curtir();
-        musica1.curtir();
-        musica1.curtir();
-        musica1.curtir();
-        System.out.println();
-        //musica1.exibirLetras();
-        System.out.println();
+        for (int i = 0; i < 5; i++) {
+            musica1.reproduzir();
+            System.out.println();
+            musica1.curtir();
+        }
 
         Musica musica2 = new Musica();
         musica2.setTitulo("Smells Like Teen Spirit");
@@ -130,12 +126,13 @@ public class Main {
                 "A denial, a denial\n" +
                 "A denial");
 
-        musica2.reproduzir();
-        System.out.println();
-        musica2.curtir();
-        musica2.curtir();
-        System.out.println();
-        System.out.println();
+        for (int i = 0; i < 7; i++) {
+            musica2.reproduzir();
+        }
+
+        for (int i = 0; i < 3; i++) {
+            musica2.curtir();
+        }
 
         Album album2 = new Album();
         album2.setTitulo("Appetite For Destruction");
@@ -236,9 +233,12 @@ public class Main {
         musica3.setGenero(genero2);
         System.out.println();
         musica3.setAlbum(album2);
-        musica3.reproduzir();
-        System.out.println();
-        musica3.curtir();
+
+        for (int i = 0; i < 3; i++) {
+            musica3.reproduzir();
+            System.out.println();
+            musica3.curtir();
+        }
 
         album2.adicionaMusica(musica3);
 
@@ -263,10 +263,13 @@ public class Main {
         podcast.setConvidado("Alaydes Morais");
         podcast.reproduzir();
         System.out.println();
-        podcast.curtir();
-        podcast.curtir();
-        podcast.curtir();
-        podcast.curtir();
+
+        for (int i = 0; i < 3; i++) {
+            podcast.reproduzir();
+            System.out.println();
+            podcast.curtir();
+        }
+
         System.out.println();
         podcast.exibeInformacoes();
 
@@ -275,6 +278,7 @@ public class Main {
         Calculadora calculadora = new Calculadora();
         calculadora.calculaDuracaoTotal(musica1);
         calculadora.calculaDuracaoTotal(musica2);
+        calculadora.calculaDuracaoTotal(musica3);
         calculadora.calculaDuracaoTotal(podcast);
         System.out.println();
 
