@@ -344,7 +344,15 @@ public class Main {
 
         Listagem listaAudios = new Listagem();
         listaAudios.adicionaAudio(musica1);
+        System.out.println();
         listaAudios.adicionaAudio(podcast);
+        System.out.println();
         listaAudios.adicionaAudio(radio1);
+        System.out.println();
+        listaAudios.exibeTodosAudios();
+        System.out.println();
+        listaAudios.removerAudio(musica1);
+        System.out.println();
+        listaAudios.exibeTodosAudios();
     }
 }

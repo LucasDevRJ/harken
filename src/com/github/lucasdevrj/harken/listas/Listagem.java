@@ -12,6 +12,15 @@ public class Listagem {
         this.listaAudios.add(audio);
     }
 
+    public void removerAudio(Audio audio) {
+        for (int i = 0; i < this.listaAudios.size(); i++) {
+            if (this.listaAudios.get(i).equals(audio)) {
+                this.listaAudios.remove(audio);
+                System.out.println("O audio " + audio.getTitulo() + " foi removido com sucesso!!");
+            }
+        }
+    }
+
     public void exibeTodosAudios() {
         System.out.println("Lista de audios cadastrados:");
         for (int i = 0; i < this.listaAudios.size(); i++) {
