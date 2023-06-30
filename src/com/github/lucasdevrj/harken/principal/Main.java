@@ -1,5 +1,6 @@
 package com.github.lucasdevrj.harken.principal;
 
+import com.github.lucasdevrj.harken.calculadora.Calcula;
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.modelos.*;
@@ -334,5 +335,11 @@ public class Main {
         radio1.exibeInformacoes();
         System.out.println();
         radio2.exibeInformacoes();
+        System.out.println();
+
+        Calculadora calculadoraAlbum = new Calculadora();
+        calculadoraAlbum.calculaDuracaoTotal(album);
+        album.exibeInformacoes();
+
     }
 }

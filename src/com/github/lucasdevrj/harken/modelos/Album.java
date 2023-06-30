@@ -1,12 +1,13 @@
 package com.github.lucasdevrj.harken.modelos;
 
+import com.github.lucasdevrj.harken.calculadora.Calcula;
 import com.github.lucasdevrj.harken.classificacao.Classificavel;
 
 import java.util.ArrayList;
 
-public class Album {
+public class Album implements Calcula {
     private String titulo;
-    private int numeroDeMusicas;
+    private int numeroDeMusicas = 0;
 
     private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
     private int duracao;
@@ -39,6 +40,7 @@ public class Album {
     public void adicionaMusica(Musica musica) {
         System.out.println("Música " + musica.titulo + " adicionada no album!");
         this.listaMusicas.add(musica);
+        this.numeroDeMusicas++;
         this.duracao += musica.duracao;
     }
     public void exibeInformacoes() {
@@ -48,7 +50,7 @@ public class Album {
                 Quantidade de Músicas: %d
                 Duração: %d minutos
                 Data: %s
-                """.formatted(this.titulo, this.numeroDeMusicas, this.duracao, this.data);
+                """.formatted(this.titulo, this.numeroDeMusicas, getDuracao(), this.data);
         System.out.println(informacoes);
     }
 
@@ -57,5 +59,10 @@ public class Album {
         for (int i = 0; i < this.listaMusicas.size(); i++) {
             System.out.println(this.listaMusicas.get(i).titulo);
         }
+    }
+
+    @Override
+    public int getDuracaoAudio() {
+        return this.duracao;
     }
 }
