@@ -1,10 +1,13 @@
 package com.github.lucasdevrj.harken.modelos;
 
+import com.github.lucasdevrj.harken.calculadora.Calcula;
+
 import java.util.ArrayList;
 
-public class Radio extends Audio {
+public class Radio extends Audio implements Calcula {
 
     private ArrayList<Radio> listaRadios = new ArrayList<Radio>();
+    private int duracaoTotal = 0;
 
     public ArrayList<Radio> getListaRadios() {
         return listaRadios;
@@ -16,17 +19,24 @@ public class Radio extends Audio {
     }
 
     public void exibeRadioMaisTocada() {
-        int radioMaisTocada = this.listaRadios.get(0).totalDeReproducoes;
+        int radioMaisTocada = this.listaRadios.get(0).duracaoTotal;
         String nomeRadioMaisTocada = this.listaRadios.get(0).titulo;
 
         for (int i = 0; i < this.listaRadios.size(); i++) {
-            if (this.listaRadios.get(i).totalDeReproducoes > radioMaisTocada) {
-                radioMaisTocada = this.listaRadios.get(i).totalDeReproducoes;
+            if (this.listaRadios.get(i).duracaoTotal > radioMaisTocada) {
+                radioMaisTocada = this.listaRadios.get(i).duracaoTotal;
                 nomeRadioMaisTocada = this.listaRadios.get(i).titulo;
             }
         }
 
         System.out.println("Radio mais tocada: " + nomeRadioMaisTocada);
+    }
+
+    public void escutarRadioPorXMinutos(int minutos) {
+        this.setDuracao(minutos);
+        this.duracaoTotal += minutos;
+        this.totalDeReproducoes++;
+        System.out.println("Você escutou a radio " + this.titulo + " por " + minutos + " minutos.");
     }
 
     public void mudaEstacao(Radio radio) {
@@ -38,5 +48,10 @@ public class Radio extends Audio {
         } else {
             System.out.println("Já está na estação desejada!!");
         }
+    }
+
+    @Override
+    public int getDuracaoAudio() {
+        return this.duracaoTotal;
     }
 }

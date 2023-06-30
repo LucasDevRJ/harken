@@ -313,15 +313,12 @@ public class Main {
 
         Radio radio1 = new Radio();
         radio1.setTitulo("89FM A Radio Rock");
-        radio1.setDuracao(1440);
-        radio1.reproduzir();
-        radio1.reproduzir();
-        radio1.reproduzir();
+        radio1.escutarRadioPorXMinutos(120);
 
         Radio radio2 = new Radio();
         radio2.setTitulo("Kiss FM 92.5");
-        radio2.setDuracao(1440);
-        radio2.reproduzir();
+        radio2.escutarRadioPorXMinutos(60);
+        System.out.println();
 
         Radio listaRadios = new Radio();
 
@@ -335,5 +332,7 @@ public class Main {
         listaRadios.exibeRadioMaisTocada();
         System.out.println();
         radio1.exibeInformacoes();
+        System.out.println();
+        radio2.exibeInformacoes();
     }
 }
