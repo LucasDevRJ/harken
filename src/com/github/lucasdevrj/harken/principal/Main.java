@@ -4,19 +4,17 @@ import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.modelos.*;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
         Album album = new Album();
-        album.setNome("Nevermind");
+        album.setTitulo("Nevermind");
         album.setData("24/09/1991");
 
         Genero genero1 = new Genero();
-        genero1.setNome("Rock");
+        genero1.setTitulo("Rock");
 
         Genero genero2 = new Genero();
-        genero2.setNome("Metal");
+        genero2.setTitulo("Metal");
 
         Musica musica1 = new Musica();
         musica1.setTitulo("Something In The Way");
@@ -139,6 +137,10 @@ public class Main {
         System.out.println();
         System.out.println();
 
+        Album album2 = new Album();
+        album2.setTitulo("Appetite For Destruction");
+        album2.setData("29/07/1987");
+
         Musica musica3 = new Musica();
         musica3.setTitulo("Paradise City");
         musica3.setGenero(genero2);
@@ -232,6 +234,13 @@ public class Main {
                 "Oh, won't you, please, take me home?\n" +
                 "Yeah, baby");
         musica3.setGenero(genero2);
+        System.out.println();
+        musica3.setAlbum(album2);
+        musica3.reproduzir();
+        System.out.println();
+        musica3.curtir();
+
+        album2.adicionaMusica(musica3);
 
         album.adicionaMusica(musica1);
         System.out.println();
@@ -290,5 +299,7 @@ public class Main {
         genero2.adicionaMusica(musica3);
         System.out.println();
         genero2.exibeMusicasPeloGenero();
+        System.out.println();
+        musica3.exibeInformacoes();
     }
 }

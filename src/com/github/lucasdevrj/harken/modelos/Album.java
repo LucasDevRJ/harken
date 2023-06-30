@@ -1,19 +1,17 @@
 package com.github.lucasdevrj.harken.modelos;
 
-import com.github.lucasdevrj.harken.classificacao.Classificavel;
-
 public class Album {
-    private String nome;
+    private String titulo;
     private int numeroDeMusicas;
     private int duracao;
     private String data;
 
-    public String getNome() {
-        return nome;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public int getNumeroDeMusicas() {
@@ -44,7 +42,7 @@ public class Album {
                 Quantidade de Músicas: %d
                 Duração: %d minutos
                 Data: %s
-                """.formatted(this.nome, this.numeroDeMusicas, this.duracao, this.data);
+                """.formatted(this.titulo, this.numeroDeMusicas, this.duracao, this.data);
         System.out.println(informacoes);
     }
 }

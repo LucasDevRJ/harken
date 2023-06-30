@@ -38,7 +38,7 @@ public class Musica extends Audio {
         String informacoes = """
                 Genêro: %s
                 Album: %s
-                """.formatted(this.genero, this.album.getNome());
+                """.formatted(this.genero.getTitulo(), this.album.getTitulo());
         System.out.println(informacoes);
     }
 }
