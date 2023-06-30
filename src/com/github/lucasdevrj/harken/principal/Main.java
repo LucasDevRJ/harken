@@ -306,5 +306,16 @@ public class Main {
         audio.exibeDuracaoTotalEscutada(calculadora);
         System.out.println();
         album.exibeMusicasAlbum();
+
+        Radio radio1 = new Radio();
+        radio1.setTitulo("89FM A Radio Rock");
+        radio1.setDuracao(1440);
+
+        Radio radio2 = new Radio();
+        radio2.setTitulo("Kiss FM 92.5");
+        radio2.setDuracao(1440);
+
+        System.out.println();
+        radio1.mudaEstacao(radio2);
     }
 }

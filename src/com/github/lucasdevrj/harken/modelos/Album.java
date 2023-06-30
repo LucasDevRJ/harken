@@ -1,5 +1,7 @@
 package com.github.lucasdevrj.harken.modelos;
 
+import com.github.lucasdevrj.harken.classificacao.Classificavel;
+
 import java.util.ArrayList;
 
 public class Album {
@@ -35,9 +37,9 @@ public class Album {
     }
 
     public void adicionaMusica(Musica musica) {
-        System.out.println("Música " + musica.getTitulo() + " adicionada no album!");
+        System.out.println("Música " + musica.titulo + " adicionada no album!");
         this.listaMusicas.add(musica);
-        this.duracao += musica.getDuracao();
+        this.duracao += musica.duracao;
     }
     public void exibeInformacoes() {
         String informacoes = """
