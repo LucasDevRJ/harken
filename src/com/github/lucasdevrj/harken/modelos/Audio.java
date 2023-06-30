@@ -7,7 +7,7 @@ import com.github.lucasdevrj.harken.classificacao.Classificavel;
 public class Audio implements Classificavel, Calcula {
     protected String titulo;
     protected int duracao;
-    private int totalDeReproducoes = 0;
+    protected int totalDeReproducoes = 0;
     private int curtidas = 0;
 
     public String getTitulo() {
