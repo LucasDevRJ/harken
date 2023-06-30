@@ -4,7 +4,7 @@ import com.github.lucasdevrj.harken.calculadora.Calcula;
 
 import java.util.ArrayList;
 
-public class Radio extends Audio implements Calcula {
+public class Radio extends Audio {
 
     private ArrayList<Radio> listaRadios = new ArrayList<Radio>();
     private int duracaoTotal = 0;
@@ -48,10 +48,5 @@ public class Radio extends Audio implements Calcula {
         } else {
             System.out.println("Já está na estação desejada!!");
         }
-    }
-
-    @Override
-    public int getDuracaoAudio() {
-        return this.duracaoTotal;
     }
 }
