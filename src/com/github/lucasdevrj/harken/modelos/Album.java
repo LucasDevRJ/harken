@@ -49,4 +49,11 @@ public class Album {
                 """.formatted(this.titulo, this.numeroDeMusicas, this.duracao, this.data);
         System.out.println(informacoes);
     }
+
+    public void exibeMusicasAlbum() {
+        System.out.println("Músicas do album " + this.titulo);
+        for (int i = 0; i < this.listaMusicas.size(); i++) {
+            System.out.println(this.listaMusicas.get(i).titulo);
+        }
+    }
 }

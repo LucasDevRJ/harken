@@ -304,5 +304,7 @@ public class Main {
 
         calculadora.calculaDuracaoTotal(musica3);
         audio.exibeDuracaoTotalEscutada(calculadora);
+        System.out.println();
+        album.exibeMusicasAlbum();
     }
 }
