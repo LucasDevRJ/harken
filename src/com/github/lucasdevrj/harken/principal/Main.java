@@ -4,6 +4,8 @@ import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.modelos.*;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Album album = new Album();
