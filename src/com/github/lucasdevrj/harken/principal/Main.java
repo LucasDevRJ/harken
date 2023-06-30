@@ -301,5 +301,8 @@ public class Main {
         genero2.exibeMusicasPeloGenero();
         System.out.println();
         musica3.exibeInformacoes();
+
+        calculadora.calculaDuracaoTotal(musica3);
+        audio.exibeDuracaoTotalEscutada(calculadora);
     }
 }

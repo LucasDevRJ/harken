@@ -1,8 +1,12 @@
 package com.github.lucasdevrj.harken.modelos;
 
+import java.util.ArrayList;
+
 public class Album {
     private String titulo;
     private int numeroDeMusicas;
+
+    private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
     private int duracao;
     private String data;
 
@@ -32,7 +36,7 @@ public class Album {
 
     public void adicionaMusica(Musica musica) {
         System.out.println("Música " + musica.getTitulo() + " adicionada no album!");
-        this.numeroDeMusicas++;
+        this.listaMusicas.add(musica);
         this.duracao += musica.getDuracao();
     }
     public void exibeInformacoes() {

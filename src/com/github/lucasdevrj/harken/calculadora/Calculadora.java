@@ -1,7 +1,4 @@
 package com.github.lucasdevrj.harken.calculadora;
-
-import com.github.lucasdevrj.harken.modelos.Musica;
-
 public class Calculadora {
     private int duracaoTotal;
     public int getDuracaoTotal() {
