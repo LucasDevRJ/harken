@@ -356,5 +356,7 @@ public class Main {
         System.out.println();
         //radio1.curtir();
         listaAudios.exibeAudiosCurtidos();
+        System.out.println();
+        album.exibeMusicaMaisCurtida();
     }
 }

@@ -67,6 +67,17 @@ public class Album implements Calcula, Classificavel {
         }
     }
 
+    public void exibeMusicaMaisCurtida() {
+        Musica musicaMaisCurtida = this.listaMusicas.get(0);
+
+        for (int i = 0; i < this.listaMusicas.size(); i++) {
+            if (musicaMaisCurtida.getClassificacao() < this.listaMusicas.get(i).getClassificacao()) {
+                musicaMaisCurtida = this.listaMusicas.get(i);
+            }
+        }
+
+        System.out.println("A música mais curtida do album " + this.titulo + " é " + musicaMaisCurtida.getTitulo());
+    }
     @Override
     public int getClassificacao() {
         return this.quantidadeCurtidas;
