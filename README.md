@@ -12,6 +12,8 @@
 ## Descrição
 O projeto Harken se consiste em uma aplicação de Streaming de músicas, radios e podcasts. Nele podemos curtir, reproduzir, ver informações da nossa música, podcast ou radio favoritos. O projeto foi desenvolvido utilizando a Classe Audio como superclass (classe mãe) e as subclass(classes filhas) são a Musica, Podcast e Radio. Logo, os filhos podem reutilizar todos os atributos da mãe, como também os métodos. Além disso, o projeto possui relacionamento entre as classes, como no caso da Classe Genero com a Musica, assim o Genero possui dentro dele uma lista de músicas. O projeto possui mais funcionalidades do que estas, você pode ver logo abaixo.
 
+O projeto também possui o encapsulamento de seus atributos, como titulo, duração, reproduções e etc. Para assim manter a aplicação mais segura, não deixando o usuário alterar dados criticos da aplicação. E, também possui interfaces como no caso da Calcula, para reaproveitarmos a lógica de calcular as durações.
+
 ## :hammer: Funcionalidades do projeto
 
 - `Funcionalidades da classe Audio`:
