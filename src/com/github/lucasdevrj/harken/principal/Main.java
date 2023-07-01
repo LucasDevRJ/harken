@@ -265,7 +265,16 @@ public class Main {
         podcast.reproduzir();
         System.out.println();
 
+        Radio radio1 = new Radio();
+        radio1.setTitulo("89FM A Radio Rock");
+        radio1.setDuracao(50);
 
+        for (int i = 0; i < 3; i++) {
+            radio1.reproduzir();
+            radio1.curtir();
+        }
+        System.out.println();
+        radio1.exibeInformacoes();
 
         for (int i = 0; i < 3; i++) {
             podcast.reproduzir();
