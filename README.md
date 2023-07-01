@@ -39,7 +39,7 @@ O projeto também possui o encapsulamento de seus atributos, como titulo, duraç
     - `Funcionalidade 3`: Exibir todos os audios
     - `Funcionalidade 3`: Adicionar audio na lista de curtidos
     - `Funcionalidade 4`: Exibir todos os curtidos
-  - `Funcionalidades da classe Classificação`
+- `Funcionalidades da classe Classificação`
     - `Funcionalidade 1`: Exibi posição
 - `Funcionalidades da classe Calculadora`
     - `Funcionalidade 1`: Calcula tempo total
