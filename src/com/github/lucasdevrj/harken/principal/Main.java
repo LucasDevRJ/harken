@@ -265,6 +265,8 @@ public class Main {
         podcast.reproduzir();
         System.out.println();
 
+
+
         for (int i = 0; i < 3; i++) {
             podcast.reproduzir();
             System.out.println();
@@ -305,30 +307,8 @@ public class Main {
         System.out.println();
         album.exibeMusicasAlbum();
 
-        Radio radio1 = new Radio();
-        radio1.setTitulo("89FM A Radio Rock");
-        radio1.escutarRadioPorXMinutos(120);
-
-        Radio radio2 = new Radio();
-        radio2.setTitulo("Kiss FM 92.5");
-        radio2.escutarRadioPorXMinutos(60);
-        System.out.println();
-
-        Radio listaRadios = new Radio();
-
         System.out.println();
         //radio1.mudaEstacao(radio2);
-
-        listaRadios.adicionaRadio(radio1);
-        System.out.println();
-        listaRadios.adicionaRadio(radio2);
-        System.out.println();
-        listaRadios.exibeRadioMaisTocada();
-        System.out.println();
-        radio1.exibeInformacoes();
-        System.out.println();
-        radio2.exibeInformacoes();
-        System.out.println();
 
         Calculadora calculadoraAlbum = new Calculadora();
         calculadoraAlbum.calculaDuracaoTotal(album);
@@ -339,14 +319,11 @@ public class Main {
         classificacao.adicionaAudio(musica1);
         classificacao.adicionaAudio(musica2);
         classificacao.adicionaAudio(podcast);
-        classificacao.adicionaAudio(radio1);
         classificacao.exibePosicao();
 
         Listagem listaAudios = new Listagem();
         listaAudios.adicionaAudio(musica1);
         listaAudios.adicionaAudio(podcast);
-        listaAudios.adicionaAudio(radio1);
-        listaAudios.adicionaAudio(radio2);
         listaAudios.adicionaAudio(musica2);
         listaAudios.adicionaAudio(musica3);
         listaAudios.exibeTodosAudios();
@@ -358,5 +335,6 @@ public class Main {
         listaAudios.exibeAudiosCurtidos();
         System.out.println();
         album.exibeMusicaMaisCurtida();
+        System.out.println();
     }
 }
