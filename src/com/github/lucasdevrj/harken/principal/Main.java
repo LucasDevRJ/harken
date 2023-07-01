@@ -354,6 +354,7 @@ public class Main {
         System.out.println();
         listaAudios.exibeTodosAudios();
         System.out.println();
+        //radio1.curtir();
         listaAudios.exibeAudiosCurtidos();
     }
 }

@@ -34,14 +34,18 @@ public class Listagem {
         }
     }
 
-    public void exibeAudiosCurtidos() {
-        System.out.println("Lista de curtidas:");
+    private ArrayList<Audio> adicionaAudioListaCurtidos() {
         for (int i = 0; i < this.listaAudios.size(); i++) {
             if (this.listaAudios.get(i).getCurtidas() > 0) {
                 this.listaCurtidos.add(this.listaAudios.get(i));
             }
         }
+        return this.listaCurtidos;
+    }
 
+    public void exibeAudiosCurtidos() {
+        adicionaAudioListaCurtidos();
+        System.out.println("Lista de curtidas:");
         for (int i = 0; i < this.listaCurtidos.size(); i++) {
             System.out.println(this.listaCurtidos.get(i).getTitulo());
         }
