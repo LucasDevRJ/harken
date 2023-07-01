@@ -1,11 +1,17 @@
 package com.github.lucasdevrj.harken.listas;
 
 import com.github.lucasdevrj.harken.modelos.Audio;
+import com.github.lucasdevrj.harken.modelos.Musica;
 
 import java.util.ArrayList;
 
 public class Listagem {
     private ArrayList<Audio> listaAudios = new ArrayList<Audio>();
+    private ArrayList<Audio> listaCurtidos = new ArrayList<Audio>();
+
+    public ArrayList<Audio> getListaCurtidos() {
+        return listaCurtidos;
+    }
 
     public void adicionaAudio(Audio audio) {
         System.out.println("Audio " + audio.getTitulo() + " adicionado!!");
@@ -25,6 +31,19 @@ public class Listagem {
         System.out.println("Lista de audios cadastrados:");
         for (int i = 0; i < this.listaAudios.size(); i++) {
             System.out.println(this.listaAudios.get(i).getTitulo());
+        }
+    }
+
+    public void exibeAudiosCurtidos() {
+        System.out.println("Lista de curtidas:");
+        for (int i = 0; i < this.listaAudios.size(); i++) {
+            if (this.listaAudios.get(i).getCurtidas() > 0) {
+                this.listaCurtidos.add(this.listaAudios.get(i));
+            }
+        }
+
+        for (int i = 0; i < this.listaCurtidos.size(); i++) {
+            System.out.println(this.listaCurtidos.get(i).getTitulo());
         }
     }
 }
