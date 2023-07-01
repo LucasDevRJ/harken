@@ -269,10 +269,25 @@ public class Main {
         radio1.setTitulo("89FM A Radio Rock");
         radio1.setDuracao(50);
 
+        Radio radio2 = new Radio();
+        radio2.setTitulo("Kiss FM 92.5");
+        radio2.setDuracao(74);
+
         for (int i = 0; i < 3; i++) {
             radio1.reproduzir();
             radio1.curtir();
         }
+
+        System.out.println();
+        radio1.exibeInformacoes();
+        System.out.println();
+        radio2.exibeInformacoes();
+
+        radio1.mudaRadio(radio2);
+        System.out.println();
+        radio1.setDuracao(34);
+        System.out.println();
+        radio1.reproduzir();
         System.out.println();
         radio1.exibeInformacoes();
 
