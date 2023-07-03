@@ -5,7 +5,11 @@ public class Musica extends Audio {
     private String letras;
     private Album album;
 
-
+    public Musica(String titulo, int duracao, Genero genero, Album album) {
+        super(titulo, duracao);
+        this.genero = genero;
+        this.album = album;
+    }
 
     public Genero getGenero() {
         return genero;
