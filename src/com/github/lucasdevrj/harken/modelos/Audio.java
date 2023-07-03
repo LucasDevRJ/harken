@@ -12,6 +12,12 @@ public class Audio implements Classificavel, Calcula {
     protected int duracao;
     protected int totalDeReproducoes = 0;
     private int curtidas = 0;
+
+    public Audio(String titulo, int duracao) {
+        this.titulo = titulo;
+        this.duracao = duracao;
+    }
+
     public String getTitulo() {
         return titulo;
     }
