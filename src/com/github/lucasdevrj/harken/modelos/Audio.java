@@ -18,6 +18,10 @@ public class Audio implements Classificavel, Calcula {
         this.duracao = duracao;
     }
 
+    public Audio() {
+
+    }
+
     public String getTitulo() {
         return titulo;
     }

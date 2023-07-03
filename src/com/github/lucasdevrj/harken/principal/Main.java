@@ -17,10 +17,7 @@ public class Main {
         Genero genero2 = new Genero();
         genero2.setTitulo("Metal");
 
-        Musica musica1 = new Musica();
-        musica1.setTitulo("Something In The Way");
-        musica1.setDuracao(4);
-        musica1.setGenero(genero1);
+        Musica musica1 = new Musica("Something In The Way", 4, genero1,album);
         musica1.setLetras(
                 "Underneath the bridge\n" +
                 "Tarp has sprung a leak\n" +
@@ -73,10 +70,7 @@ public class Main {
             musica1.curtir();
         }
 
-        Musica musica2 = new Musica();
-        musica2.setTitulo("Smells Like Teen Spirit");
-        musica2.setDuracao(5);
-        musica2.setGenero(genero1);
+        Musica musica2 = new Musica("Smells Like Teen Spirit", 5, genero1, album);
         musica2.setLetras("Load up on guns, bring your friends\n" +
                 "It's fun to lose and to pretend\n" +
                 "She's over-bored and self-assured\n" +
@@ -139,10 +133,7 @@ public class Main {
         album2.setTitulo("Appetite For Destruction");
         album2.setData("29/07/1987");
 
-        Musica musica3 = new Musica();
-        musica3.setTitulo("Paradise City");
-        musica3.setGenero(genero2);
-        musica3.setDuracao(6);
+        Musica musica3 = new Musica("Paradise City", 6, genero2, album);
         musica3.setLetras("Take me down to the Paradise City\n" +
                 "Where the grass is green and the girls are pretty\n" +
                 "(Take me home) oh, won't you, please, take me home?\n" +
