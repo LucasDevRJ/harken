@@ -7,9 +7,7 @@ import com.github.lucasdevrj.harken.modelos.*;
 
 public class Main {
     public static void main(String[] args) {
-        Album album = new Album();
-        album.setTitulo("Nevermind");
-        album.setData("24/09/1991");
+        Album album = new Album("Nevermind", "24/09/1991");
 
         Genero genero1 = new Genero();
         genero1.setTitulo("Rock");

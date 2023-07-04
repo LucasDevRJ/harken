@@ -12,8 +12,12 @@ public class Album implements Calcula, Classificavel {
     private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
     private int duracao;
     private String data;
-
     private int quantidadeCurtidas;
+
+    public Album(String titulo, String data) {
+        this.titulo = titulo;
+        this.data = data;
+    }
 
     public String getTitulo() {
         return titulo;
