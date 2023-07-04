@@ -246,11 +246,9 @@ public class Main {
         podcast.reproduzir();
         System.out.println();
 
-        Radio radio1 = new Radio("89FM A Radio Rock");
-        radio1.setDuracao(50);
+        Radio radio1 = new Radio("89FM A Radio Rock", 50);
 
-        Radio radio2 = new Radio("Kiss FM 92.5");
-        radio2.setDuracao(74);
+        Radio radio2 = new Radio("Kiss FM 92.5", 74);
 
         for (int i = 0; i < 3; i++) {
             radio1.reproduzir();
@@ -279,7 +277,7 @@ public class Main {
         System.out.println();
         podcast.exibeInformacoes();
 
-        Audio audio = new Audio();
+        Audio audio = new Audio("Something In The Way", 4);
 
         Calculadora calculadora = new Calculadora();
         calculadora.calculaDuracaoTotal(musica1);
@@ -339,5 +337,7 @@ public class Main {
         System.out.println();
         album.exibeMusicaMaisCurtida();
         System.out.println();
+
+        audio.trocar(musica1);
     }
 }

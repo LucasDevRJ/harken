@@ -6,8 +6,7 @@ public class Podcast extends Audio {
     private String convidado;
 
     public Podcast(String titulo, int duracao, String descricao, String host) {
-        this.titulo = titulo;
-        this.duracao = duracao;
+        super(titulo, duracao);
         this.descricao = descricao;
         this.host = host;
     }

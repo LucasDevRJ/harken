@@ -10,6 +10,11 @@ public class Audio implements Classificavel, Calcula {
     protected int totalDeReproducoes = 0;
     private int curtidas = 0;
 
+    public Audio(String titulo, int duracao) {
+        this.titulo = titulo;
+        this.duracao = duracao;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -58,6 +63,14 @@ public class Audio implements Classificavel, Calcula {
     public void exibeDuracaoTotalEscutada(Calculadora duracao) {
         int duracaoTotal = duracao.getDuracaoTotal();
         System.out.println("Duração total escutada: " + duracaoTotal + " minutos.");
+    }
+
+    public void trocar(Audio audio) {
+        if (!this.titulo.equals(audio.titulo) && this.duracao != audio.duracao) {
+            System.out.println("Você mudou de " + this.titulo + " para " + audio.titulo);
+        } else {
+            System.out.println("Já está ouvindo o que deseja!!");
+        }
     }
 
     @Override
