@@ -9,7 +9,6 @@ public class Genero {
     public Genero(String titulo) {
         this.titulo = titulo;
     }
-
     public String getTitulo() {
         return titulo;
     }

@@ -3,24 +3,12 @@ package com.github.lucasdevrj.harken.modelos;
 import com.github.lucasdevrj.harken.calculadora.Calcula;
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificavel;
-import com.github.lucasdevrj.harken.listas.Listagem;
-
-import java.util.ArrayList;
 
 public class Audio implements Classificavel, Calcula {
     protected String titulo;
     protected int duracao;
     protected int totalDeReproducoes = 0;
     private int curtidas = 0;
-
-    public Audio(String titulo, int duracao) {
-        this.titulo = titulo;
-        this.duracao = duracao;
-    }
-
-    public Audio() {
-
-    }
 
     public String getTitulo() {
         return titulo;

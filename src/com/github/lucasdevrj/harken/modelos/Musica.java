@@ -6,7 +6,8 @@ public class Musica extends Audio {
     private Album album;
 
     public Musica(String titulo, int duracao, Genero genero, Album album) {
-        super(titulo, duracao);
+        this.titulo = titulo;
+        this.duracao = duracao;
         this.genero = genero;
         this.album = album;
     }

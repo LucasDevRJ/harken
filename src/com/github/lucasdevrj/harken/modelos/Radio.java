@@ -9,6 +9,10 @@ public class Radio extends Audio {
     private int duracaoEscutadaTotal = 0;
     private int quantidadeOuvintes = 0;
 
+    public Radio(String titulo) {
+        this.titulo = titulo;
+    }
+
     public int getDuracaoEscutadaTotal() {
         return duracaoEscutadaTotal;
     }

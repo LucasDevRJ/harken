@@ -241,21 +241,15 @@ public class Main {
         System.out.println();
         musica2.exibeInformacoes();
 
-        Podcast podcast = new Podcast();
-        podcast.setTitulo("Hipsters Ponto Tech");
-        podcast.setDescricao("Discussões sobre tecnologia, programação, design, startups e as últimas tendências.");
-        podcast.setDuracao(41);
-        podcast.setHost("Paulo Silveira");
+        Podcast podcast = new Podcast("Hipsters Ponto Tech", 41, "Discussões sobre tecnologia, programação, design, startups e as últimas tendências.", "Paulo Silveira");
         podcast.setConvidado("Alaydes Morais");
         podcast.reproduzir();
         System.out.println();
 
-        Radio radio1 = new Radio();
-        radio1.setTitulo("89FM A Radio Rock");
+        Radio radio1 = new Radio("89FM A Radio Rock");
         radio1.setDuracao(50);
 
-        Radio radio2 = new Radio();
-        radio2.setTitulo("Kiss FM 92.5");
+        Radio radio2 = new Radio("Kiss FM 92.5");
         radio2.setDuracao(74);
 
         for (int i = 0; i < 3; i++) {
