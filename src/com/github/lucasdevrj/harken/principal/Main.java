@@ -9,11 +9,9 @@ public class Main {
     public static void main(String[] args) {
         Album album = new Album("Nevermind", "24/09/1991");
 
-        Genero genero1 = new Genero();
-        genero1.setTitulo("Rock");
+        Genero genero1 = new Genero("Rock");
 
-        Genero genero2 = new Genero();
-        genero2.setTitulo("Metal");
+        Genero genero2 = new Genero("Metal");
 
         Musica musica1 = new Musica("Something In The Way", 4, genero1,album);
         musica1.setLetras(
