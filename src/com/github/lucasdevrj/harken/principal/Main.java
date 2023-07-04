@@ -127,9 +127,7 @@ public class Main {
             musica2.curtir();
         }
 
-        Album album2 = new Album();
-        album2.setTitulo("Appetite For Destruction");
-        album2.setData("29/07/1987");
+        Album album2 = new Album("Appetite For Destruction", "29/07/1987");
 
         Musica musica3 = new Musica("Paradise City", 6, genero2, album);
         musica3.setLetras("Take me down to the Paradise City\n" +

@@ -6,6 +6,10 @@ public class Genero {
     private String titulo;
     private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
 
+    public Genero(String titulo) {
+        this.titulo = titulo;
+    }
+
     public String getTitulo() {
         return titulo;
     }

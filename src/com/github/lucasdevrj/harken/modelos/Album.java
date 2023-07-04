@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class Album implements Calcula, Classificavel {
     private String titulo;
     private int numeroDeMusicas = 0;
-
     private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
     private int duracao;
     private String data;
