@@ -46,4 +46,9 @@ public class Musica extends Audio {
                 """.formatted(this.genero.getTitulo(), this.album.getTitulo());
         System.out.println(informacoes);
     }
+
+    @Override
+    public int compareTo(Audio o) {
+        return super.compareTo(o);
+    }
 }

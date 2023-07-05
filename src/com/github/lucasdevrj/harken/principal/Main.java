@@ -353,14 +353,5 @@ public class Main {
         listaMusicas.adiciona(musica3);
         listaMusicas.exibe();
         System.out.println();
-
-        List<Audio> listaOrdenada = new ArrayList<Audio>();
-        listaOrdenada.add(musica1);
-        listaOrdenada.add(musica2);
-        listaOrdenada.add(musica3);
-        Collections.sort(listaOrdenada);
-        for (int i = 0; i < listaOrdenada.size(); i++) {
-            System.out.println(listaOrdenada.get(i).getTitulo());
-        }
     }
 }
