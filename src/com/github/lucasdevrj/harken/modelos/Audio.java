@@ -19,18 +19,9 @@ public class Audio implements Classificavel, Calcula, Comparable<Audio> {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public int getDuracaoCalculada() {
         return duracao;
     }
-
-    public void setDuracao(int duracao) {
-        this.duracao = duracao;
-    }
-
     public int getTotalDeReproducoes() {
         return totalDeReproducoes;
     }
