@@ -89,7 +89,7 @@ public class Audio implements Classificavel, Calcula, Comparable<Audio> {
     }
 
     @Override
-    public int compareTo(Audio outroAudio) {
-        return this.getTitulo().compareTo(outroAudio.titulo);
+    public int compareTo(Audio o) {
+        return this.titulo.compareTo(o.titulo);
     }
 }

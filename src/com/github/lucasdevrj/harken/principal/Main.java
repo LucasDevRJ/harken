@@ -6,6 +6,11 @@ import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.listas.ListagemMusicas;
 import com.github.lucasdevrj.harken.modelos.*;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Album album = new Album("Nevermind", "24/09/1991");
@@ -329,11 +334,10 @@ public class Main {
         listaAudios.adiciona(musica2);
         listaAudios.adiciona(musica3);
         listaAudios.adiciona(radio1);
-        listaAudios.adiciona(radio2);
-        listaAudios.exibeTodosAudios();
+        listaAudios.exibe();
         listaAudios.remove(musica1);
         System.out.println();
-        listaAudios.exibeTodosAudios();
+        listaAudios.exibe();
         System.out.println();
         //radio1.curtir();
         listaAudios.exibeAudiosCurtidos();
@@ -344,7 +348,20 @@ public class Main {
         audio.trocar(musica1);
         System.out.println();
 
-        ListagemMusicas listagemMusicas = new ListagemMusicas();
+        ListagemMusicas listaMusicas = new ListagemMusicas();
+        listaMusicas.adiciona(musica1);
+        listaMusicas.adiciona(musica2);
+        listaMusicas.adiciona(musica3);
+        listaMusicas.exibe();
+        System.out.println();
 
+        List<Audio> listaOrdenada = new ArrayList<Audio>();
+        listaOrdenada.add(musica1);
+        listaOrdenada.add(musica2);
+        listaOrdenada.add(musica3);
+        Collections.sort(listaOrdenada);
+        for (int i = 0; i < listaOrdenada.size(); i++) {
+            System.out.println(listaOrdenada.get(i).getTitulo());
+        }
     }
 }
