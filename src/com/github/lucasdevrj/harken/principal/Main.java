@@ -8,7 +8,12 @@ import com.github.lucasdevrj.harken.modelos.*;
 
 public class Main {
     public static void main(String[] args) {
-        Album album = new Album("Nevermind", "24/09/1991");
+        Banda banda = new Banda("Nirvana");
+
+        Album album = new Album("Nevermind", "24/09/1991", banda);
+
+        banda.adicionaAlbum(album);
+        System.out.println();
 
         Genero genero1 = new Genero("Rock");
 
@@ -65,6 +70,7 @@ public class Main {
             musica1.reproduzir();
             System.out.println();
             musica1.curtir();
+            System.out.println();
         }
 
         Musica musica2 = new Musica("Smells Like Teen Spirit", 5, genero1, album);
@@ -120,13 +126,17 @@ public class Main {
 
         for (int i = 0; i < 7; i++) {
             musica2.reproduzir();
+            System.out.println();
         }
 
         for (int i = 0; i < 3; i++) {
             musica2.curtir();
+            System.out.println();
         }
 
-        Album album2 = new Album("Appetite For Destruction", "29/07/1987");
+        Banda banda2 = new Banda("Guns N' Roses");
+
+        Album album2 = new Album("Appetite For Destruction", "29/07/1987", banda2);
 
         Musica musica3 = new Musica("Paradise City", 6, genero2, album);
         musica3.setLetras("Take me down to the Paradise City\n" +
@@ -225,6 +235,7 @@ public class Main {
             musica3.reproduzir();
             System.out.println();
             musica3.curtir();
+            System.out.println();
         }
 
         album2.adicionaMusica(musica3);
@@ -236,13 +247,16 @@ public class Main {
         album.exibeInformacoes();
 
         musica1.setAlbum(album);
+        System.out.println();
         musica2.setAlbum(album);
 
         musica1.exibeInformacoes();
         System.out.println();
         musica2.exibeInformacoes();
+        System.out.println();
 
         Podcast podcast = new Podcast("Hipsters Ponto Tech",0 , "Paulo Silveira");
+        podcast.setDescricao("Discussões sobre tecnologia, programação, design, startups e as últimas tendências.");
         podcast.reproduzir();
         System.out.println();
 
@@ -250,6 +264,7 @@ public class Main {
         Episodio episodio2 = new Episodio("Clientecentrismo e operações – Deep Dive Bradesco 4", "05/07/2023","Walkiria Schirrmeister Marchetti", 39, podcast);
 
         podcast.adicionaEpisodio(episodio1);
+        System.out.println();
         podcast.adicionaEpisodio(episodio2);
         System.out.println();
         podcast.exibeInformacoes();
@@ -261,10 +276,11 @@ public class Main {
 
         for (int i = 0; i < 3; i++) {
             radio1.reproduzir();
+            System.out.println();
             radio1.curtir();
+            System.out.println();
         }
 
-        System.out.println();
         radio1.exibeInformacoes();
         System.out.println();
         radio2.exibeInformacoes();
@@ -279,9 +295,9 @@ public class Main {
             podcast.reproduzir();
             System.out.println();
             podcast.curtir();
+            System.out.println();
         }
 
-        System.out.println();
         podcast.exibeInformacoes();
 
         Audio audio = new Audio("Something In The Way", 4);

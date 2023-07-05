@@ -7,9 +7,12 @@ public class Banda {
     private ArrayList<Album> albuns = new ArrayList<Album>();
     private Genero genero;
 
-    public Banda(String titulo, ArrayList<Album> albuns) {
+    public Banda(String titulo) {
         this.titulo = titulo;
-        this.albuns = albuns;
+    }
+
+    public String getTitulo() {
+        return titulo;
     }
 
     public void adicionaAlbum(Album album) {

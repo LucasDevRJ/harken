@@ -52,7 +52,7 @@ public class Radio extends Audio {
                 Duração Atual Escutada: %d minutos
                 Curtidas: %d
                 Duração Total Escutada: %d minutos
-                Quantidade de Ouvintes = %d
+                Quantidade de Ouvintes: %d
                 """.formatted(this.titulo, this.duracao, this.getCurtidas(), this.duracaoEscutadaTotal, this.quantidadeOuvintes);
         System.out.println(informacoes);
     }

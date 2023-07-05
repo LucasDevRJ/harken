@@ -9,13 +9,15 @@ public class Album implements Calcula, Classificavel {
     private String titulo;
     private int numeroDeMusicas = 0;
     private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
+    private Banda banda;
     private int duracao;
     private String data;
     private int quantidadeCurtidas;
 
-    public Album(String titulo, String data) {
+    public Album(String titulo, String data, Banda banda) {
         this.titulo = titulo;
         this.data = data;
+        this.banda = banda;
     }
 
     public String getTitulo() {
@@ -28,6 +30,10 @@ public class Album implements Calcula, Classificavel {
 
     public int getNumeroDeMusicas() {
         return numeroDeMusicas;
+    }
+
+    public Banda getBanda() {
+        return banda;
     }
 
     public int getDuracaoCalculada() {
@@ -56,10 +62,11 @@ public class Album implements Calcula, Classificavel {
         String informacoes = """
                 Informações sobre o album
                 Nome: %s
+                Banda: %s
                 Quantidade de Músicas: %d
                 Duração: %d minutos
                 Data: %s
-                """.formatted(this.titulo, this.numeroDeMusicas, getDuracaoCalculada(), this.data);
+                """.formatted(this.titulo, this.banda.getTitulo(), this.numeroDeMusicas, getDuracaoCalculada(), this.data);
         System.out.println(informacoes);
     }
 
