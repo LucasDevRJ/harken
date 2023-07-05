@@ -14,6 +14,8 @@ O projeto Harken se consiste em uma aplicação de Streaming de músicas, radios
 
 O projeto também possui o encapsulamento de seus atributos, como titulo, duração, reproduções e etc. Para assim manter a aplicação mais segura, não deixando o usuário alterar dados criticos da aplicação. E, também possui interfaces como no caso da Calcula, para reaproveitarmos a lógica de calcular as durações.
 
+![Print do projeto](https://github.com/LucasDevRJ/harken/assets/95040236/2942052c-213d-45bb-b38d-24e58d28c174)
+
 ## :hammer: Funcionalidades do projeto
 
 - `Funcionalidades da classe Audio`:
@@ -43,6 +45,8 @@ O projeto também possui o encapsulamento de seus atributos, como titulo, duraç
     - `Funcionalidade 1`: Exibi posição
 - `Funcionalidades da classe Calculadora`
     - `Funcionalidade 1`: Calcula tempo total
+
+[Vídeo apresentação](https://github.com/LucasDevRJ/harken/assets/95040236/3327f07d-a573-452c-b2d8-9034415a889f)
 
 # :file_folder: Acesso ao projeto
 
