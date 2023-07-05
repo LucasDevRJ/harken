@@ -19,4 +19,9 @@ public class ListagemPodcasts {
         Collections.sort(this.listaPodcasts);
         this.listaPodcasts.forEach(podcast -> System.out.println(podcast.getTitulo()));
     }
+
+    public void remove(Podcast podcast) {
+        this.listaPodcasts.remove(podcast);
+        System.out.println("O podcast " + podcast.getTitulo() + " foi removido!");
+    }
 }
