@@ -4,7 +4,7 @@ import com.github.lucasdevrj.harken.modelos.Audio;
 
 import java.util.ArrayList;
 
-public class ListagemAudio {
+public class ListagemAudios {
     private ArrayList<Audio> listaAudios = new ArrayList<Audio>();
     private ArrayList<Audio> listaCurtidos = new ArrayList<Audio>();
 

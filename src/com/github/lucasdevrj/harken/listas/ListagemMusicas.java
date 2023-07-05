@@ -4,7 +4,7 @@ import com.github.lucasdevrj.harken.modelos.Musica;
 
 import java.util.ArrayList;
 
-public class ListagemMusica {
+public class ListagemMusicas {
     private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
 
     public void adiciona(Musica musica) {
