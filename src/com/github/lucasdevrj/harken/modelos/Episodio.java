@@ -6,6 +6,13 @@ public class Episodio {
     private int duracao;
     private String descricao;
 
+    public Episodio(String titulo, String data, int duracao, String descricao) {
+        this.titulo = titulo;
+        this.data = data;
+        this.duracao = duracao;
+        this.descricao = descricao;
+    }
+
     public String getTitulo() {
         return titulo;
     }

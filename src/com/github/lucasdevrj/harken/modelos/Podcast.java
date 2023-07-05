@@ -1,7 +1,10 @@
 package com.github.lucasdevrj.harken.modelos;
 
+import java.util.ArrayList;
+
 public class Podcast extends Audio {
     private String descricao;
+    private ArrayList<Episodio> listaEpisodios;
     private String host;
     private String convidado;
 
@@ -35,6 +38,11 @@ public class Podcast extends Audio {
         this.convidado = convidado;
     }
 
+    public void adicionaEpisodio(Episodio episodio) {
+        this.listaEpisodios.add(episodio);
+        System.out.println("O episodio " + episodio.getTitulo() + " foi adicionado com sucesso!");
+    }
+
     @Override
     public void exibeInformacoes() {
         super.exibeInformacoes();
@@ -45,5 +53,4 @@ public class Podcast extends Audio {
                 """.formatted(this.descricao, this.host, this.convidado);
         System.out.print(informacoes);
     }
-
 }
