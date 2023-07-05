@@ -12,12 +12,12 @@ public class ListagemAudios {
         return listaCurtidos;
     }
 
-    public void adicionaAudio(Audio audio) {
+    public void adiciona(Audio audio) {
         System.out.println("Audio " + audio.getTitulo() + " adicionado!!");
         this.listaAudios.add(audio);
     }
 
-    public void removerAudio(Audio audio) {
+    public void remove(Audio audio) {
         for (int i = 0; i < this.listaAudios.size(); i++) {
             if (this.listaAudios.get(i).equals(audio)) {
                 this.listaAudios.remove(audio);

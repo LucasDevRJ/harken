@@ -3,6 +3,7 @@ package com.github.lucasdevrj.harken.principal;
 import com.github.lucasdevrj.harken.listas.ListagemAudios;
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificacao;
+import com.github.lucasdevrj.harken.listas.ListagemMusicas;
 import com.github.lucasdevrj.harken.modelos.*;
 
 public class Main {
@@ -323,14 +324,14 @@ public class Main {
         classificacao.exibePosicao();
 
         ListagemAudios listaAudios = new ListagemAudios();
-        listaAudios.adicionaAudio(musica1);
-        listaAudios.adicionaAudio(podcast);
-        listaAudios.adicionaAudio(musica2);
-        listaAudios.adicionaAudio(musica3);
-        listaAudios.adicionaAudio(radio1);
-        listaAudios.adicionaAudio(radio2);
+        listaAudios.adiciona(musica1);
+        listaAudios.adiciona(podcast);
+        listaAudios.adiciona(musica2);
+        listaAudios.adiciona(musica3);
+        listaAudios.adiciona(radio1);
+        listaAudios.adiciona(radio2);
         listaAudios.exibeTodosAudios();
-        listaAudios.removerAudio(musica1);
+        listaAudios.remove(musica1);
         System.out.println();
         listaAudios.exibeTodosAudios();
         System.out.println();
@@ -343,6 +344,7 @@ public class Main {
         audio.trocar(musica1);
         System.out.println();
 
-        listaAudios.exibeTodosAudios(musica1);
+        ListagemMusicas listagemMusicas = new ListagemMusicas();
+
     }
 }
