@@ -33,7 +33,6 @@ public class Listagem {
             System.out.println(this.listaAudios.get(i).getTitulo());
         }
     }
-
     private ArrayList<Audio> adicionaAudioListaCurtidos() {
         for (int i = 0; i < this.listaAudios.size(); i++) {
             if (this.listaAudios.get(i).getCurtidas() > 0) {

@@ -4,7 +4,7 @@ import com.github.lucasdevrj.harken.calculadora.Calcula;
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificavel;
 
-public class Audio implements Classificavel, Calcula {
+public class Audio implements Classificavel, Calcula, Comparable<Audio> {
     protected String titulo;
     protected int duracao;
     protected int totalDeReproducoes = 0;
@@ -86,5 +86,10 @@ public class Audio implements Classificavel, Calcula {
     @Override
     public int getTotalReproducoesAudio() {
         return this.totalDeReproducoes;
+    }
+
+    @Override
+    public int compareTo(Audio outroAudio) {
+        return this.getTitulo().compareTo(outroAudio.titulo);
     }
 }

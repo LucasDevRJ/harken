@@ -327,6 +327,8 @@ public class Main {
         listaAudios.adicionaAudio(podcast);
         listaAudios.adicionaAudio(musica2);
         listaAudios.adicionaAudio(musica3);
+        listaAudios.adicionaAudio(radio1);
+        listaAudios.adicionaAudio(radio2);
         listaAudios.exibeTodosAudios();
         listaAudios.removerAudio(musica1);
         System.out.println();
