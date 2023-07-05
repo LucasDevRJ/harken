@@ -26,11 +26,13 @@ public class ListagemMusicas {
                 Nome: %s
                 Album: %s
                 Genero: %s
-                Duração: %d
+                Duração: %d minutos
+                Curtidas: %d
                 """.formatted(this.listaMusicas.get(i).getTitulo(),
                     this.listaMusicas.get(i).getAlbum().getNome(),
                     this.listaMusicas.get(i).getGenero().getTitulo(),
-                    this.listaMusicas.get(i).getDuracaoCalculada());
+                    this.listaMusicas.get(i).getDuracaoCalculada(),
+                    this.listaMusicas.get(i).getCurtidas());
             System.out.println(informacoes);
         }
     }
