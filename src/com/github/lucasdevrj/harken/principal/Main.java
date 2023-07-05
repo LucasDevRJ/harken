@@ -4,6 +4,7 @@ import com.github.lucasdevrj.harken.listas.ListagemAudios;
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.listas.ListagemMusicas;
+import com.github.lucasdevrj.harken.listas.ListagemPodcasts;
 import com.github.lucasdevrj.harken.modelos.*;
 
 import java.util.ArrayList;
@@ -351,7 +352,11 @@ public class Main {
         listaMusicas.adiciona(musica1);
         listaMusicas.adiciona(musica2);
         listaMusicas.adiciona(musica3);
+        System.out.println();
         listaMusicas.exibe();
         System.out.println();
+
+//        ListagemPodcasts listaPodcasts = new ListagemPodcasts();
+//        listaPodcasts.adiciona(podcast);
     }
 }

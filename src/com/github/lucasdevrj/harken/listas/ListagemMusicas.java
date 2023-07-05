@@ -21,6 +21,17 @@ public class ListagemMusicas {
     public void exibe() {
         System.out.println("Lista de músicas cadastradas:");
         Collections.sort(this.listaMusicas);
-        this.listaMusicas.forEach(musica -> System.out.println(musica.getTitulo()));
+        for (int i = 0; i < this.listaMusicas.size(); i++) {
+            String informacoes = """
+                Nome: %s
+                Album: %s
+                Genero: %s
+                Duração: %d
+                """.formatted(this.listaMusicas.get(i).getTitulo(),
+                    this.listaMusicas.get(i).getAlbum().getNome(),
+                    this.listaMusicas.get(i).getGenero().getTitulo(),
+                    this.listaMusicas.get(i).getDuracaoCalculada());
+            System.out.println(informacoes);
+        }
     }
 }
