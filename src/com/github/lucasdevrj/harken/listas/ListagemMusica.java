@@ -1,11 +1,10 @@
 package com.github.lucasdevrj.harken.listas;
 
-import com.github.lucasdevrj.harken.modelos.Audio;
 import com.github.lucasdevrj.harken.modelos.Musica;
 
 import java.util.ArrayList;
 
-public class ListagemMusicas {
+public class ListagemMusica {
     private ArrayList<Musica> listaMusicas = new ArrayList<Musica>();
 
     public void adiciona(Musica musica) {

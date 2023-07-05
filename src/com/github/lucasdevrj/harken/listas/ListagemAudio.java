@@ -3,10 +3,8 @@ package com.github.lucasdevrj.harken.listas;
 import com.github.lucasdevrj.harken.modelos.Audio;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
-public class ListagemAudios {
+public class ListagemAudio {
     private ArrayList<Audio> listaAudios = new ArrayList<Audio>();
     private ArrayList<Audio> listaCurtidos = new ArrayList<Audio>();
 
