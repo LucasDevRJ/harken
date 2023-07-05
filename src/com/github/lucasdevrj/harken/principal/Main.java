@@ -4,12 +4,7 @@ import com.github.lucasdevrj.harken.listas.ListagemAudios;
 import com.github.lucasdevrj.harken.calculadora.Calculadora;
 import com.github.lucasdevrj.harken.classificacao.Classificacao;
 import com.github.lucasdevrj.harken.listas.ListagemMusicas;
-import com.github.lucasdevrj.harken.listas.ListagemPodcasts;
 import com.github.lucasdevrj.harken.modelos.*;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -247,9 +242,17 @@ public class Main {
         System.out.println();
         musica2.exibeInformacoes();
 
-        Podcast podcast = new Podcast("Hipsters Ponto Tech", 41, "Discussões sobre tecnologia, programação, design, startups e as últimas tendências.", "Paulo Silveira");
-        podcast.setConvidado("Alaydes Morais");
+        Podcast podcast = new Podcast("Hipsters Ponto Tech",0 , "Paulo Silveira");
         podcast.reproduzir();
+        System.out.println();
+
+        Episodio episodio1 = new Episodio("NVIDIA, IA, comunidade e Dev Leaders", "05/07/2023","Jomar Silva", 42, podcast);
+        Episodio episodio2 = new Episodio("Clientecentrismo e operações – Deep Dive Bradesco 4", "05/07/2023","Walkiria Schirrmeister Marchetti", 39, podcast);
+
+        podcast.adicionaEpisodio(episodio1);
+        podcast.adicionaEpisodio(episodio2);
+        System.out.println();
+        podcast.exibeInformacoes();
         System.out.println();
 
         Radio radio1 = new Radio("89FM A Radio Rock", 50);
@@ -267,8 +270,6 @@ public class Main {
         radio2.exibeInformacoes();
 
         radio1.mudaRadio(radio2);
-        System.out.println();
-        radio1.setDuracao(34);
         System.out.println();
         radio1.reproduzir();
         System.out.println();
@@ -355,7 +356,5 @@ public class Main {
         System.out.println();
         listaMusicas.exibe();
         System.out.println();
-
-
     }
 }

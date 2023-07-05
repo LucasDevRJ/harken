@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 public class Podcast extends Audio {
     private String descricao;
-    private ArrayList<Episodio> listaEpisodios;
     private String host;
-    private String convidado;
+    private ArrayList<Episodio> listaEpisodios = new ArrayList<Episodio>();
+    private int quantidadeEpisodios = 0;
 
-    public Podcast(String titulo, int duracao, String descricao, String host) {
+    public Podcast(String titulo, int duracao, String host) {
         super(titulo, duracao);
-        this.descricao = descricao;
         this.host = host;
     }
 
@@ -26,20 +25,18 @@ public class Podcast extends Audio {
         return host;
     }
 
-    public void setHost(String host) {
-        this.host = host;
+    public int getQuantidadeEpisodios() {
+        return quantidadeEpisodios;
     }
 
-    public String getConvidado() {
-        return convidado;
-    }
-
-    public void setConvidado(String convidado) {
-        this.convidado = convidado;
+    public ArrayList<Episodio> getListaEpisodios() {
+        return listaEpisodios;
     }
 
     public void adicionaEpisodio(Episodio episodio) {
         this.listaEpisodios.add(episodio);
+        this.quantidadeEpisodios++;
+        this.duracao += episodio.getDuracao();
         System.out.println("O episodio " + episodio.getTitulo() + " foi adicionado com sucesso!");
     }
 
@@ -49,8 +46,8 @@ public class Podcast extends Audio {
         String informacoes = """
                 Descrição: %s
                 Host: %s
-                Convidado: %s
-                """.formatted(this.descricao, this.host, this.convidado);
+                Quantidade de episodios: %d
+                """.formatted(this.descricao, this.host, this.quantidadeEpisodios);
         System.out.print(informacoes);
     }
 }

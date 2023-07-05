@@ -17,12 +17,18 @@ public class ListagemPodcasts {
     public void exibe() {
         System.out.println("Lista de podcast cadastrados:");
         Collections.sort(this.listaPodcasts);
-        String informacoes = """
+        for (int i = 0; i < this.listaPodcasts.size(); i++) {
+            String informacoes = """
                 Nome: %s
                 Host: %s
-                Convidade: %s
-                
-                """;
+                Quantidade de episodios: %d
+                Duração: %d minutos
+                """.formatted(this.listaPodcasts.get(i).getNome(),
+                    this.listaPodcasts.get(i).getHost(),
+                    this.listaPodcasts.get(i).getQuantidadeEpisodios(),
+                    this.listaPodcasts.get(i).getDuracaoCalculada());
+            System.out.println(informacoes);
+        }
     }
 
     public void remove(Podcast podcast) {
